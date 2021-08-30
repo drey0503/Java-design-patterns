@@ -58,7 +58,7 @@ public class GuestList {
         return this.title;
     }
 /**
- * 
+ * we instatiate the search behavior and its default is linear search.
  * @param searchBehavior
  */
     public void setSearchBehavior(SearchBehavior searchBehavior) {
