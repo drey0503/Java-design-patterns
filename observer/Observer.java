@@ -5,10 +5,10 @@ package observer;
  * it is implemented in the Store and Customer classes,
  */
 public interface Observer {
-    public void update(Book book){
+    public void update(Book book);
 
-    }
-    public void display(){
+    
+    public void display();
 
-    }
+    
 }
