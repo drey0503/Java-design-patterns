@@ -1,4 +1,5 @@
 package observer;
+
 /**
  * @author Dreyson Clark
  * sets up the wishlist arraylist and other things like the book title, the author first and last name 
@@ -13,15 +14,28 @@ public class Customer implements Observers {
     private String lastName;
     private ArrayList<Book> wishList;
 
-    public Customer(Subject subject, String firstName, String lastName){
-        this.subject=subject;
-        this.firstName=firstName;
-        this.lastName=lastName;
+    /**
+     * constructor for class. registering the observer in this class. instantiating
+     * the first and last name of the author.
+     * 
+     * @param subject
+     * @param firstName
+     * @param lastName
+     */
+    public Customer(Subject subject, String firstName, String lastName) {
+        this.subject = subject;
+        subject.registerObserver(this);
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-    public void update(Book book){
 
+    public void update(Book book) {
+        wishList.add(book);
     }
-    public void display(){
-        
+
+    public void display() {
+        for(Book books: wishList){
+             System.out.println(books);
+        }
     }
 }
