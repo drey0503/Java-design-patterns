@@ -1,4 +1,3 @@
-package observer;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,15 +11,17 @@ public class Store implements Observer {
     private Subject subject;
     private String title;
     private Queue<Book> bestSellers;
-/**
- * Class constructor that registers this class as a observer and also instantiates the queue for books as a linked list.
- * @param subject
- * @return
- */
-    pubic Store(Subject subject) {
+
+    /**
+     * Class constructor that registers this class as a observer and also
+     * instantiates the queue for books as a linked list.
+     * 
+     * @param subject
+     * @return
+     */
+    public Store(Subject subject) {
         bestSellers = new LinkedList<>();
         this.subject = subject;
-        this.title = title;
         this.subject.registerObserver(this);
     }
 
@@ -31,7 +32,7 @@ public class Store implements Observer {
     public void update(Book book) {
         bestSellers.add(book);
         if (bestSellers.size() > 5) {
-            bestSellers.remove(book);
+            bestSellers.remove();
         }
 
     }
@@ -41,8 +42,9 @@ public class Store implements Observer {
      * list.
      */
     public void display() {
+        System.out.println("Top 5 Best Sellers:");
         for (Book books : bestSellers) {
-            System.out.println(books);
+            System.out.println(" - " + books);
         }
     }
 }

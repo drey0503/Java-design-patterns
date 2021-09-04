@@ -1,4 +1,4 @@
-package observer;
+
 
 /**
  * @author Dreyson Clark 
@@ -35,6 +35,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return this.title + ";" + this.authorFirstName + " " + this.authorLastName;
+        return this.title + " by: " + this.authorFirstName + " " + this.authorLastName;
     }
 }

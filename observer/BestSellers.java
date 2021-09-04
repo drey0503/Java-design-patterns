@@ -1,4 +1,4 @@
-package observer;
+
 
 import java.util.ArrayList;
 
@@ -14,8 +14,8 @@ public class BestSellers implements Subject {
      * instantiating the arraylists
      */
     public BestSellers() {
-        this.observers = new Arraylist<>();
-        this.bestSellers = new Arraylist<>();
+        this.observers = new ArrayList<>();
+        this.bestSellers = new ArrayList<>();
     }
 
     public void registerObserver(Observer observer) {
@@ -42,6 +42,6 @@ public class BestSellers implements Subject {
      */
     public void addBook(Book book) {
         bestSellers.add(book);
-        this.notifyObserver(book);
+        notifyObserver(book);
     }
 }

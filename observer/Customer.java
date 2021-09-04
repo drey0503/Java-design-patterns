@@ -1,4 +1,3 @@
-package observer;
 
 /**
  * @author Dreyson Clark
@@ -8,7 +7,7 @@ package observer;
 
 import java.util.ArrayList;
 
-public class Customer implements Observers {
+public class Customer implements Observer {
     private Subject subject;
     private String firstName;
     private String lastName;
@@ -23,6 +22,7 @@ public class Customer implements Observers {
      * @param lastName
      */
     public Customer(Subject subject, String firstName, String lastName) {
+        this.wishList = new ArrayList<>();
         this.subject = subject;
         subject.registerObserver(this);
         this.firstName = firstName;
@@ -34,8 +34,10 @@ public class Customer implements Observers {
     }
 
     public void display() {
+        System.out.println("Wish List:");
         for(Book books: wishList){
-             System.out.println(books);
+             System.out.println(" - "+books);
         }
+
     }
 }
