@@ -19,24 +19,27 @@ public class BestSellers implements Subject {
     }
 
     public void registerObserver(Observer observer) {
-
+        observers.add(observer);
     }
 
     public void removeObserver(Observer observer) {
-
+        observers.remove(observer);
     }
-/**
- * loop through the observers and update the book to all of the observers.
- */
+
+    /**
+     * loop through the observers and update the book to all of the observers.
+     */
     public void notifyObserver(Book book) {
         for (Observer observe : observers) {
             observe.update(book);
         }
     }
-/**
- * add books to bestsellers list and notify observers of new books.
- * @param book
- */
+
+    /**
+     * add books to bestsellers list and notify observers of new books.
+     * 
+     * @param book
+     */
     public void addBook(Book book) {
         bestSellers.add(book);
         this.notifyObserver(book);
