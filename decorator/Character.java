@@ -21,8 +21,8 @@ public abstract class Character {
      * the screen
      */
     public void draw() {
-        for (int i;i<sections.size();i++) {
-            System.out.println(sections);
+        for (int i=0; i<sections.size(); i++) {
+            System.out.println(sections.get(i));
         }
     }
 }
