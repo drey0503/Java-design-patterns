@@ -1,5 +1,7 @@
 package decorator;
 
-public class Eyes {
+public class Eyes extends CharacterDecorator {
+
+    
     
 }

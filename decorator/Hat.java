@@ -1,5 +1,7 @@
 package decorator;
 
-public class Hat {
+public class Hat extends CharacterDecorator {
+
+    
     
 }
