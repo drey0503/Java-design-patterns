@@ -2,6 +2,7 @@ package decorator;
 /**
  * @author Dreyson Clark
  *  constructor responsible for adding all of the lines to sections.
+ * in each section, it adds a specific set of Strings for the base of the potato head.
  */
 public class PotatoeHead extends Character {
    public PotatoeHead() {

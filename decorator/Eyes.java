@@ -12,7 +12,9 @@ public class Eyes extends CharacterDecorator {
         super(character);
         
     }
-
+/**
+ * this customize method overrides the base section and replaces it with the String below.
+ */
     @Override
     public void customize() {
         sections.set(3," |  o  o  | " );
