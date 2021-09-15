@@ -15,6 +15,30 @@ public abstract class HousePlan {
         
     }
     public abstract void setMaterials();
+
     public abstract void setFeatures();
-    
+
+    public ArrayList<String> getMaterials(){
+        return 
+    }
+    public ArrayList<String> getFeatures(){
+        return
+    }
+    public int getNumRooms(){
+        return this.numRooms;
+    }
+    public int getNumWindows(){
+        return this.numWindows;
+    }
+    public int getSquareFeet(){
+        return this.squareFeet;
+    }
+    /**
+     * prints all values in the format for the output given by the instructor.
+     */
+    @Override
+    public String toString(){
+        return this.
+    }
+
 }
