@@ -21,7 +21,7 @@ public class HousePlanFactory {
             houseplan= new TinyHousePlan();
         }
          else if (type.equalsIgnoreCase("contemporaryHouse")){
-            houseplan= new TinyHousePlan();
+            houseplan= new ContemporaryPlan();
         }
         return houseplan;
     }

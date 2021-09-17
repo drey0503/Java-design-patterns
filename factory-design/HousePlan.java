@@ -5,24 +5,29 @@ import java.util.ArrayList;
  * 
  */
 public abstract class HousePlan {
-    protected ArrayList<String> material;
+    protected ArrayList<String> materials;
     protected ArrayList<String> features;
     private int numRooms;
     private int numWindows;
     private int squareFeet;
 
     public HousePlan(int numRooms, int numWindows, int squareFeet){
-        
+        this.numRooms=numRooms;
+        this.numWindows=numWindows;
+        this.squareFeet=squareFeet;
+        this.materials= new ArrayList<>();
+        this.features = new ArrayList<>();
+
     }
     public abstract void setMaterials();
 
     public abstract void setFeatures();
 
     public ArrayList<String> getMaterials(){
-        return 
+        return this.materials; 
     }
     public ArrayList<String> getFeatures(){
-        return
+        return this.features;
     }
     public int getNumRooms(){
         return this.numRooms;
@@ -38,7 +43,18 @@ public abstract class HousePlan {
      */
     @Override
     public String toString(){
-        return this.
+        String house = "";
+        house="Square Feet: " + this.squareFeet;
+        house+="\nRooms: " + this.numRooms;
+        house+="\nWindows: " + this.numWindows;
+
+        for(String material : materials){
+            house+= "\n\nMaterials: " + materials;
+        }
+        for (String feature : features) {
+            house += "\n\nFeatures: " + features;
+        }
+        return house;
     }
 
 }
