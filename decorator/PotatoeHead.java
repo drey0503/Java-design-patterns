@@ -1,4 +1,3 @@
-package decorator;
 /**
  * @author Dreyson Clark
  *  constructor responsible for adding all of the lines to sections.

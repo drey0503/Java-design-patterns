@@ -1,3 +1,5 @@
+package observer;
+
 
 /**
  * @author this class is a interface which updates the books and display's the

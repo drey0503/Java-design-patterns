@@ -1,5 +1,3 @@
-
-
 /**
  * @author Dreyson Clark 
  * The details of what each book is. It consist of the title, the author's first, and last name.

@@ -1,3 +1,5 @@
+package observer;
+
 
 /**
  * @author Dreyson Clark this class register's and removes observers from the

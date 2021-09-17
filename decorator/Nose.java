@@ -1,4 +1,3 @@
-package decorator;
 /**
  * @author Dreyson Clark
  * this class sets up the Strings for the nose on the face.

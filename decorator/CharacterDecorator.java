@@ -1,4 +1,3 @@
-package decorator;
 
 /**
  * @author Dreyson Clark Class defines what is considered a "character" like
