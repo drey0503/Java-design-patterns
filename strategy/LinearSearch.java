@@ -2,7 +2,7 @@
  * @author Dreyson Clark
  * Goes through the list individually and checks every item in arraylist.
  */
-package strategy;
+
 import java.util.ArrayList;
 
 

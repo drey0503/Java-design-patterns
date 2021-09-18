@@ -12,15 +12,20 @@ public class HousePlanFactory {
      * @param type
      * @return
      */
-    public HousePlan createHousePlan(String type) {
+    public static HousePlan createHousePlan(String type) {
         HousePlan houseplan;
-        if (type.equalsIgnoreCase("logCabin")) {
+        if (type.equalsIgnoreCase("log cabin")) {
             houseplan = new LogCabinPlan();
-        } else if (type.equalsIgnoreCase("tinyHouse")) {
-            houseplan = new TinyHousePlan();
-        } else if (type.equalsIgnoreCase("contemporaryHouse")) {
+        } else if (type.equalsIgnoreCase("Tiny Home")) {
+            houseplan = new TinyHomePlan();
+        } else if (type.equalsIgnoreCase("contemporary home")) {
             houseplan = new ContemporaryPlan();
-        }
+        } else houseplan= new LogCabinPlan();
+
+        houseplan.getNumRooms();
+        houseplan.getNumWindows();
+        houseplan.setFeatures();
+        houseplan.setMaterials();
         return houseplan;
     }
 

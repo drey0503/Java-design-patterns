@@ -1,4 +1,4 @@
-package strategy;
+
 /**
 * Can add and remove people off list and checks to see if on list or not
 * @author Dreyson Clark
