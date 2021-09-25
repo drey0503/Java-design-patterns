@@ -18,10 +18,31 @@ public class Flight {
  * @param transfers
  */
     public Flight(String flightNum, String from, String to, int duration, int transfers) {
+        this.flightNum=flightNum;
         this.from = from;
         this.to = to;
         this.duration = duration;
         this.transfers = transfers;
 
     }
+    public String getFrom(){
+        return this.from;
+    }
+    public String getTo(){
+        return this.to;
+    }
+    public int getDuration(){
+        return this.duration;
+    }
+    public int getNumTransders(){
+        return this.transfers;
+    }
+    @Override
+    public String toString(){
+        
+        return "Flight number: "+ flightNum +"/n"+"From: " + from+"/n"+ "To: "+ to 
+        +"/n"+"Duration: "+ duration+ "/n" + transfers + "Transfers";
+    
+    }
+
 }
