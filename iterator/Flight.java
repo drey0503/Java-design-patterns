@@ -41,7 +41,7 @@ public class Flight {
     public String toString(){
         
         return "Flight number: "+ flightNum +"/n"+"From: " + from+"/n"+ "To: "+ to 
-        +"/n"+"Duration: "+ duration+ "/n" + transfers + "Transfers";
+        +"/n"+"Duration: "+ duration+ "/n" + transfers;
     
     }
 
