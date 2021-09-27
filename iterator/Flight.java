@@ -25,6 +25,7 @@ public class Flight {
         this.transfers = transfers;
 
     }
+    
     public String getFrom(){
         return this.from;
     }
@@ -34,15 +35,24 @@ public class Flight {
     public int getDuration(){
         return this.duration;
     }
-    public int getNumTransders(){
+    public int getNumTransfers(){
         return this.transfers;
     }
     @Override
     public String toString(){
-        
+        if(transfers ==0){
         return "Flight number: "+ flightNum +"/n"+"From: " + from+"/n"+ "To: "+ to 
-        +"/n"+"Duration: "+ duration+ "/n" + transfers;
-    
+        +"/n"+"Duration: "+ duration/60 + " hours" +duration%60+" minutes "+"/n" + "Direct Flight";
+        }
+        if(transfers ==1){
+           return "Flight number: "+ flightNum +"/n"+"From: " + from+"/n"+ "To: "+ to +"/n"+"Duration: "+
+           duration/60 + " hours" +duration%60+" minutes "+"/n" + "1 Transfer";
+        }
+        else {
+        return "Flight number: "+ flightNum +"/n"+"From: " + from+"/n"+ "To: "+ to 
+        +"/n"+"Duration: "+duration/60 + " hours" +duration%60+" minutes"+"/n" + transfers+ " transfers";
+        }
+    }
     }
 
-}
+

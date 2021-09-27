@@ -9,9 +9,9 @@ public class FlightIterator implements Iterator {
     }
 
     public Flight next() {
-        Flight flights = flights[position];
+        Flight flight = flights[position];
         position = position + 1;
-        return flights;
+        return flight;
     }
 
     public boolean hasNext() {
