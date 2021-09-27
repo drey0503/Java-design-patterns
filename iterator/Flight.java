@@ -25,7 +25,10 @@ public class Flight {
         this.transfers = transfers;
 
     }
-    
+  /**
+   * my getter method's for the private int's and string's
+   * @return
+   */  
     public String getFrom(){
         return this.from;
     }
@@ -38,19 +41,22 @@ public class Flight {
     public int getNumTransfers(){
         return this.transfers;
     }
+    /**
+     * in this toString I set up the format for each case of flight transfers. 
+     */
     @Override
     public String toString(){
         if(transfers ==0){
-        return "Flight number: "+ flightNum +"/n"+"From: " + from+"/n"+ "To: "+ to 
-        +"/n"+"Duration: "+ duration/60 + " hours" +duration%60+" minutes "+"/n" + "Direct Flight";
+        return "Flight Number: "+ flightNum +"\n"+"From: " + from+"\n"+ "To: "+ to 
+        +"\n"+"Duration: "+ duration/60 + " hours " +duration%60+" minutes "+"\n" + "Direct Flight";
         }
         if(transfers ==1){
-           return "Flight number: "+ flightNum +"/n"+"From: " + from+"/n"+ "To: "+ to +"/n"+"Duration: "+
-           duration/60 + " hours" +duration%60+" minutes "+"/n" + "1 Transfer";
+           return "Flight Number: "+ flightNum +"\n"+"From: " + from+"\n"+ "To: "+ to +"\n"+"Duration: "+
+           duration/60 + " hours " +duration%60+" minutes "+"\n" + "1 Transfer";
         }
         else {
-        return "Flight number: "+ flightNum +"/n"+"From: " + from+"/n"+ "To: "+ to 
-        +"/n"+"Duration: "+duration/60 + " hours" +duration%60+" minutes"+"/n" + transfers+ " transfers";
+        return "Flight Number: "+ flightNum +"\n"+"From: " + from+"\n"+ "To: "+ to 
+        +"\n"+"Duration: "+duration/60 + " hours " +duration%60+" minutes"+"\n" + transfers+ " transfers";
         }
     }
     }
