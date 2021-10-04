@@ -12,9 +12,50 @@ import java.util.Scanner;
 public class TriviaGame {
     private static TriviaGame triviaGame;
     private int score;
-    Scanner reader = new Scanner (System.in);
-    Random rand = new Random();
+    private Scanner reader;
+    private Random rand;
     private ArrayList<Question> questions;
     
-    private TriviaGame(){}
+    private TriviaGame(){
+        reader = new Scanner(System.in);
+        rand = new Random();
+        questions=DataLoader.getTriviaQuestions();
+    }
+/**
+ * 
+ * @return
+ */
+    public static TriviaGame getInstance(){
+        if (triviaGame == null) {
+            triviaGame = new TriviaGame();
+        }
+        return triviaGame;
+    }
+    public void play(){
+        playRound();
+        System.out.print("(P)lay or (Q)uit: ");
+       String playnow = reader.nextLine();
+        while (playnow.equalsIgnoreCase("p")){
+        playRound();
+        System.out.print("(P)lay or (Q)uit: ");
+        playnow = reader.nextLine();
+}
+    System.out.println("You won "+ score + " games!"+ "\n"+"Goodbye");
+    }
+
+    private boolean playRound(){
+       int randq = rand.nextInt(questions.size());
+       System.out.println(questions.get(randq));
+       System.out.println("Enter answer: ");
+       int playround=reader.nextInt();
+       reader.nextLine();
+       if(questions.get(randq).isCorrect(playround)){
+           System.out.println("YAY! You got it right!");
+        score++;
+        return true;
+       }
+       System.out.println("You got it wrong!" + "\n"+ "The correct answer is: "+ questions.get(randq));
+        return false;
+
+    }
 }

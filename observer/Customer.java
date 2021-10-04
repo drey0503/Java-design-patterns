@@ -1,6 +1,3 @@
-
-
-
 /**
  * @author Dreyson Clark
  * sets up the wishlist arraylist and other things like the book title, the author first and last name 

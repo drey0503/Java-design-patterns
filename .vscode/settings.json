@@ -3,6 +3,8 @@
         "observer",
         "factory-design",
         "strategy",
-        "decorator"
+        "decorator",
+        "iterator",
+        "singleton"
     ]
 }

@@ -9,9 +9,12 @@ private int correctAnswer;
 
 public Question(String question, String ans1, String ans2, String ans3, String ans4, int correctAnswer){
 this.question=question;
-
 this.correctAnswer=correctAnswer;
-
+ answers = new String[4];
+ answers[0]=ans1;
+ answers[1]=ans2;
+ answers[2]=ans3;
+answers [3]=ans4;
 }
 /**
  * + toString(): String + isCorrect(int userAnswer): boolean +
@@ -19,17 +22,17 @@ this.correctAnswer=correctAnswer;
  */
 @Override
 public String toString(){
-return question + "\n" + "1. "+ ans1 +"\n"+ "2. "+ ans2 + "\n"+ "3. "+ ans3 +"\n"+ "4. "+ ans4 + "\n";
+return question + "\n" + "1. "+ answers[0] +"\n"+ "2. "+ answers[1] + "\n"+ "3. "+ answers[2] +"\n"+ "4. "+ answers[3] + "\n";
 }
 
-public boolean (int userAnswer){
-if(userAnswer==1){
-    
+public boolean isCorrect(int userAnswer){
+if(correctAnswer==correctAnswer-1){
+    return true;
 }
-    return 0;
+  return false;
 }
 public String getCorrectAnswer(){
- return ;
+ return answers[correctAnswer];
 }
 }
 
