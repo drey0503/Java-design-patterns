@@ -49,12 +49,16 @@ public class TriviaGame {
        System.out.println("Enter answer: ");
        int playround=reader.nextInt();
        reader.nextLine();
+       if(playround<1 || playround >4){
+           System.out.println("Enter number 1-4, restart again.");
+           return false;
+       }
        if(questions.get(randq).isCorrect(playround)){
            System.out.println("YAY! You got it right!");
         score++;
         return true;
        }
-       System.out.println("You got it wrong!" + "\n"+ "The correct answer is: "+ questions.get(randq));
+       System.out.println("You got it wrong!" + "\n"+ "The correct answer is: "+ questions.get(randq).getCorrectAnswer());
         return false;
 
     }

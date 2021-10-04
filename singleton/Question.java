@@ -26,7 +26,7 @@ return question + "\n" + "1. "+ answers[0] +"\n"+ "2. "+ answers[1] + "\n"+ "3. 
 }
 
 public boolean isCorrect(int userAnswer){
-if(correctAnswer==correctAnswer-1){
+if(correctAnswer==userAnswer-1){
     return true;
 }
   return false;
