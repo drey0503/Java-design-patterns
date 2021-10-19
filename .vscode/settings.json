@@ -1,10 +1,11 @@
 {
     "java.project.sourcePaths": [
-        "observer",
-        "factory-design",
         "strategy",
-        "decorator",
+        "singleton",
+        "observer",
         "iterator",
-        "singleton"
+        "factory-design",
+        "decorator",
+        "CommandDesignPattern"
     ]
 }
