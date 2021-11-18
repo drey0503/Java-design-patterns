@@ -6,6 +6,7 @@
         "iterator",
         "factory-design",
         "decorator",
-        "CommandDesignPattern"
+        "CommandDesignPattern",
+        "UofSCInternshipRemedy"
     ]
 }
