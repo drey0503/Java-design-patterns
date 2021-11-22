@@ -11,25 +11,33 @@ public class Hard implements State {
     public Hard(ArithemeticGame game) {
     this.game = game;
     }
-
+/**
+ * sends a print out statement.
+ */
     @Override
     public void levelUp() {
     System.out.println("You are doing so well!!!");
     }
-
+/**
+ * levels down the game state.
+ */
     @Override
     public void levelDown() {
     System.out.println("You are struggling, let's go to medium mode.");
     game.setState(game.getMediumState());
         
     }
-
+/**
+ * gets a random number 0-100 and returns that number.
+ */
     @Override
     public int getNum() {
     int randomInt = rand.nextInt(100)+ 1;
     return randomInt;
     }
-
+/**
+ * gets a random operation choosing from +,-,*,/
+ */
     @Override
     public String getOperation() {
     int randomOperation= rand.nextInt(4);

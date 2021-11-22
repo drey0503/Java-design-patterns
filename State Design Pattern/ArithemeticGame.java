@@ -1,3 +1,7 @@
+/**
+ * @author Dreyson Clark
+ * This class creates the game essentially.
+ */
 import java.util.Scanner;
 
 public class ArithemeticGame {
@@ -7,7 +11,9 @@ public class ArithemeticGame {
     private State mediumState;
     private int score;
     Scanner scan = new Scanner(System.in);
-    
+    /**
+     * instantiating each state;
+     */
     public ArithemeticGame() {
         easyState = new Easy(this);
         mediumState = new Medium(this);
@@ -37,6 +43,15 @@ public class ArithemeticGame {
     public int getScore() {
         return score;
     }
+    
+    /**
+     * Will get two numbers and an operation from the state. 
+     * Will present the user with a question Will get the users answer (int, even for division).
+     * If the user got the answer correct they get the message "Correct" and score is increased by 1. 
+     * If the user got the answer incorrect they will get the message "Incorrect" and score is decreased by 1.
+     * if score >= 3, then level up their state and reset score to 0.
+     * if score <= -3, then level down their state and reset score to 0.
+     */
     public void pressQuestionButton() {
         int answer=0;
         String operation =state.getOperation();
