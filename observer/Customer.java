@@ -7,10 +7,10 @@
 import java.util.ArrayList;
 
 public class Customer implements Observer {
+    private ArrayList<Book> wishList;
     private Subject subject;
     private String firstName;
     private String lastName;
-    private ArrayList<Book> wishList;
 
     /**
      * constructor for class. registering the observer in this class. instantiating

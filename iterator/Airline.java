@@ -47,7 +47,7 @@ public class Airline {
 	}
 
 	public Iterator createIterator() {
-		return new FlightIterator(flights);
+		return new Flightiterator(flights);
 	}
 
 	/**

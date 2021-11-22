@@ -1,7 +1,7 @@
 /**
  * A driver for the Trivia Game
  */
-public class GameDriver {
+public class GameDrivers {
 
     /**
      * Runs the trivia game
@@ -12,7 +12,7 @@ public class GameDriver {
     }
 
     public static void main(String[] args) {
-        GameDriver driver = new GameDriver();
+        GameDrivers driver = new GameDrivers();
         driver.run();
     }
 }

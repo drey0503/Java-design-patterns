@@ -4,7 +4,7 @@
  */
 import java.util.Iterator;
 
-public class FlightIterator implements Iterator {
+public class Flightiterator implements Iterator {
     private Flight[] flights;
     private int position = 0;
 
@@ -12,7 +12,7 @@ public class FlightIterator implements Iterator {
  * Constructor -> accepts an array of flights
  * @param flights
  */
-    public FlightIterator(Flight[] flights) {
+    public Flightiterator(Flight[] flights) {
         this.flights = flights;
     }
 

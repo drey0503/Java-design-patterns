@@ -8,6 +8,8 @@
         "decorator",
         "CommandDesignPattern",
         "UofSCInternshipRemedy",
-        "State Design Pattern"
-    ]
+        "State Design Pattern",
+        "statedesign"
+    ],
+    "java.project.outputPath": "output"
 }

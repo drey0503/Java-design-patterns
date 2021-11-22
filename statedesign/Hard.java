@@ -7,7 +7,7 @@ import java.util.Random;
 public class Hard implements State {
     private ArithemeticGame game;
     Random rand = new Random();
-    private String operation;
+
     public Hard(ArithemeticGame game) {
     this.game = game;
     }
@@ -40,6 +40,7 @@ public class Hard implements State {
  */
     @Override
     public String getOperation() {
+        String operation="";
     int randomOperation= rand.nextInt(4);
     // might have to change the next int to 5
     if(randomOperation==0){

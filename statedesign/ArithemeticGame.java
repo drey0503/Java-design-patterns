@@ -18,8 +18,10 @@ public class ArithemeticGame {
         easyState = new Easy(this);
         mediumState = new Medium(this);
         hardState = new Hard(this);
+        this.state=easyState;
+        score=0;
     }
-    public void getScore(int score){
+    public void setScore(int score){
      this.score=score;
     }
     public void setState(State state) {
@@ -54,12 +56,11 @@ public class ArithemeticGame {
      */
     public void pressQuestionButton() {
         int answer=0;
-        String operation =state.getOperation();
+        String operation = state.getOperation();
         int q1=state.getNum();
         int q2=state.getNum();
-        System.out.println(q1+" "+state.getOperation()+" "+q2);
+        System.out.println("What is: "+ q1+" "+ operation +" "+q2 +" ?");
         int ianswer = scan.nextInt();
-        while(score<3||score>-3){
         switch(operation){
             case "+":
             answer = q1+q2;
@@ -76,7 +77,16 @@ public class ArithemeticGame {
             default:
             System.out.println("enter in correct answer");
         }
-        if(score>=3){
+       
+       if(ianswer == answer){
+           System.out.println("you are correct!");
+            score++;
+        } 
+        if(ianswer!= answer){
+            System.out.println("you are incorrect");
+            score--;
+        }
+    if(score>=3){
             state.levelUp();
             score=0;
         }
@@ -84,13 +94,6 @@ public class ArithemeticGame {
             state.levelDown();
             score=0;
         }
-       if(ianswer == answer){
-            score+=1;
-        } 
-        if(ianswer!= answer){
-            score-=1;
-        }
-    }
     }
 
     
